@@ -5,12 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="/dist/output.css" rel="stylesheet" />
+    <script src="//unpkg.com/alpinejs" defer></script>
   </head>
   <body dir="rtl" class="font-vazir">
-    <p class="font-sans text-xl">سلام</p>
-    <p class="font-sans text-xs">سلام</p>
-    <p class="font-sans text-5xh">سلام</p>
-    <p class="font-sans text-2xl">سلام</p>
-    <p class="font-sans text-7xl">سلام</p>
+    <div x-data="{open : false}">
+      <nav class="w-full py-5 fixed top-0 bg-[#333333] z-50">
+        <div class="py-5 lg:py-2">
+          <ul
+            x-show="open"
+            x-transition
+            class="fixed top-5 w-full bg-[#333333] lg:hidden flex flex-col gap-12 lg:flex-row justify-center items-center py-14"
+          >
+            <li class="li"><a href="#">خانه</a></li>
+            <li class="li"><a href="#">درباره</a></li>
+            <li class="li"><a href="#">خدمات</a></li>
+            <li class="li"><a href="#">پورتفولیو</a></li>
+            <li class="li"><a href="#">تماس</a></li>
+          </ul>
+          <ul
+            class="fixed top-0 w-full bg-[#333333] hidden lg:flex gap-12 lg:flex-row justify-start items-center py-5 px-8"
+          >
+            <li class="li"><a href="#">خانه</a></li>
+            <li class="li"><a href="#">درباره</a></li>
+            <li class="li"><a href="#">خدمات</a></li>
+            <li class="li"><a href="#">پورتفولیو</a></li>
+            <li class="li"><a href="#">تماس</a></li>
+          </ul>
+        </div>
+      </nav>
+      <button
+        class="lg:hidden transition-all duration-300"
+        @click="open =! open"
+        :class="open ? 'hidden' : 'block' "
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-9 h-9 fixed top-6 right-5 text-white z-50"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
+      <button
+        class="lg:hidden transition-all duration-300"
+        @click="open = false"
+        :class="open ? 'block' : 'hidden' "
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-9 h-9 fixed top-6 right-5 text-white z-50"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+      <div class="z-50 fixed lg:top-2 top-3 left-2 lg:w-12 w-14">
+        <img src="img/logo.png" alt="" />
+      </div>
+    </div>
   </body>
 </html>

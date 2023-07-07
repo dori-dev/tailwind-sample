@@ -6,6 +6,7 @@
   @font-face {
     font-family: "vazir";
     src: url(../fonts/Vazirmatn-Regular.woff2);
+    font-weight: 400;
   }
 }
 
@@ -13,5 +14,12 @@
   @font-face {
     font-family: "vazirBold";
     src: url(../fonts/Vazirmatn-Medium.woff2);
+    font-weight: 500;
+  }
+}
+
+@layer components {
+  .li {
+    @apply hover:scale-110 hover:shadow-red-600 transition-all duration-300 text-white;
   }
 }
