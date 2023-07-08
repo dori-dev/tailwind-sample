@@ -631,6 +631,18 @@ video {
   top: 1rem;
 }
 
+.right-1 {
+  right: 0.25rem;
+}
+
+.top-1 {
+  top: 0.25rem;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -783,6 +795,10 @@ video {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-14 {
+  gap: 3.5rem;
 }
 
 .gap-y-2 {
