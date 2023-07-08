@@ -9,7 +9,7 @@
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
-  <body dir="rtl" class="font-vazir bg-[#353434]">
+  <body dir="rtl" class="font-vazir bg-[#353434] text-white">
     <!-- Navbar -->
     <div x-data="{open : false}">
       <nav
@@ -92,17 +92,75 @@
     <div
       class="bg w-full h-screen flex flex-col gap-6 justify-center items-center text-white"
     >
-      <h1 class="font-vazirBold md:text-7xl text-4xl" data-aos="fade-left" data-aos-duration="500">
+      <h1
+        class="font-vazirBold md:text-7xl text-4xl"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+      >
         سلام، من محمد ام
       </h1>
-      <div class="text-center" data-aos="fade-right" data-aos-duration="500">
+      <div class="text-center" data-aos="fade-right" data-aos-duration="1000">
         <p class="md:text-2xl text-lg">فریلنسری خلاق و حرفه ای</p>
         <p class="md:text-2xl text-lg">وب دولوپر</p>
       </div>
-      <button class="btn md:text-2xl text-lg" data-aos="zoom-in" data-aos-duration="500">Contact Me</button>
+      <div data-aos="zoom-in" data-aos-duration="1000">
+        <button class="btn md:text-2xl text-lg px-6">Contact Me</button>
+      </div>
     </div>
     <!-- Background Image -->
-    <div class="py-96"></div>
+    <!-- About Me -->
+    <div
+      class="w-[80%] h-[1000px] flex flex-col-reverse lg:flex-row justify-center lg:items-center items-start gap-12 mx-auto"
+    >
+      <div
+        class="xl:w-1/2 lg:w-2/3 flex justify-center items-start flex-col gap-y-2"
+      >
+        <hr
+          class="border-[#ff0066] w-52 border-2 shadow-pink"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        />
+        <h2
+          class="font-vazirBold lg:text-5xl md:text-4xl text-3xl mt-4"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          معرفی درمورد من
+        </h2>
+        <p
+          class="md:text-xl text-md mt-8"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+        >
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+          از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
+          سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+          متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه
+          درصد گذشته حال و آینده
+          <br />
+          <br />
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+          از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
+          سطرآنچنان که لازم است
+        </p>
+        <div class="w-full flex gap-4 lg:gap-8 mt-6">
+          <div class="w-1/2" data-aos="fade-left" data-aos-duration="1000">
+            <button class="btn w-full text-sm md:text-md lg:text-lg">
+              Download CV
+            </button>
+          </div>
+          <div class="w-1/2" data-aos="fade-right" data-aos-duration="1000">
+            <button class="btn w-full text-sm md:text-md lg:text-lg">
+              Contact Me
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="w-fit" data-aos="fade-up-right" data-aos-duration="1000">
+        <img src="../img/avatar.jpg" alt="" />
+      </div>
+    </div>
+    <!-- About Me -->
     <script>
       AOS.init();
     </script>
