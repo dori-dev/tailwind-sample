@@ -25,6 +25,9 @@
   .btn {
     @apply shadow-pink-sm pb-1 pt-2 px-2 rounded transition-all duration-300 ease-in-out text-white bg-[#ff0066] font-vazirBold hover:scale-110 hover:bg-[#e6005c];
   }
+  .card {
+    @apply lg:w-[45%] w-full bg-white text-black px-10 py-16 relative rounded-lg h-full;
+  }
 }
 
 .bg {
