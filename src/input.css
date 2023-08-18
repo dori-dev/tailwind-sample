@@ -23,7 +23,7 @@
     @apply hover:scale-110 hover:shadow-red-600 transition-all duration-300 text-slate-100;
   }
   .active {
-    @apply font-vazirBold text-white;
+    @apply font-vazirBold text-[#ff0066];
   }
   .btn {
     @apply shadow-pink-sm pb-1 pt-2 px-2 rounded
@@ -67,6 +67,10 @@
   }
   .social svg {
     @apply fill-white;
+  }
+  .footer-item {
+    @apply mx-3 lg:w-fit w-1/3 text-center cursor-pointer
+    transition-colors duration-300 ease-in-out hover:text-[#ff0066];
   }
 }
 
