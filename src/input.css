@@ -20,7 +20,10 @@
 
 @layer components {
   .li {
-    @apply hover:scale-110 hover:shadow-red-600 transition-all duration-300 text-white;
+    @apply hover:scale-110 hover:shadow-red-600 transition-all duration-300 text-slate-100;
+  }
+  .active {
+    @apply font-vazirBold text-white;
   }
   .btn {
     @apply shadow-pink-sm pb-1 pt-2 px-2 rounded

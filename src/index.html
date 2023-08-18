@@ -42,23 +42,27 @@
           <ul
             x-show="open"
             x-transition
-            class="fixed top-5 w-full bg-[#333333] lg:hidden flex flex-col gap-12 lg:flex-row justify-center items-center py-14"
+            class="navbar fixed top-5 w-full bg-[#333333] lg:hidden flex flex-col gap-12 lg:flex-row justify-center items-center py-14"
           >
-            <li class="li"><a href="#">خانه</a></li>
-            <li class="li"><a href="#">درباره</a></li>
-            <li class="li"><a href="#">خدمات</a></li>
-            <li class="li"><a href="#">پورتفولیو</a></li>
-            <li class="li"><a href="#">تماس</a></li>
+            <li class="li"><a href="#home">خانه</a></li>
+            <li class="li"><a href="#about">درباره</a></li>
+            <li class="li"><a href="#services">خدمات</a></li>
+            <li class="li"><a href="#portfolio">نمونه کارها</a></li>
+            <li class="li"><a href="#contact">تماس</a></li>
+            <li class="li"><a href="#customer">نظر مشتریان</a></li>
+            <li class="li"><a href="#weblog">وبلاگ</a></li>
           </ul>
           <!-- Desktop -->
           <ul
-            class="fixed top-0 w-full bg-[#333333] hidden lg:flex gap-12 lg:flex-row justify-start items-center py-5 px-8"
+            class="navbar fixed top-0 w-full bg-[#333333] hidden lg:flex gap-12 lg:flex-row justify-start items-center py-5 px-8"
           >
-            <li class="li"><a href="#">خانه</a></li>
-            <li class="li"><a href="#">درباره</a></li>
-            <li class="li"><a href="#">خدمات</a></li>
-            <li class="li"><a href="#">پورتفولیو</a></li>
-            <li class="li"><a href="#">تماس</a></li>
+            <li class="li"><a href="#home">خانه</a></li>
+            <li class="li"><a href="#about">درباره</a></li>
+            <li class="li"><a href="#services">خدمات</a></li>
+            <li class="li"><a href="#portfolio">نمونه کارها</a></li>
+            <li class="li"><a href="#contact">تماس</a></li>
+            <li class="li"><a href="#customer">نظر مشتریان</a></li>
+            <li class="li"><a href="#weblog">وبلاگ</a></li>
           </ul>
         </div>
       </nav>
@@ -85,6 +89,7 @@
       </button>
       <!-- Close Btn -->
       <button
+        id="closeBtn"
         class="lg:hidden transition-all duration-300"
         @click="open = false"
         :class="open ? 'block' : 'hidden' "
@@ -113,6 +118,7 @@
 
     <!-- Background Image -->
     <div
+      id="home"
       class="bg w-full h-screen flex flex-col gap-6 justify-center items-center text-white"
     >
       <h1
@@ -136,6 +142,7 @@
 
     <!-- About Me -->
     <div
+      id="about"
       class="w-[80%] h-[1000px] flex flex-col lg:flex-row justify-center lg:items-center items-start gap-14 mx-auto"
     >
       <div
@@ -196,7 +203,7 @@
     <!-- About Me -->
 
     <!-- Services -->
-    <div class="w-[80%] mx-auto flex flex-col mt-28 lg:mt-0">
+    <div id="services" class="w-[80%] mx-auto flex flex-col pt-28 lg:mt-0">
       <div class="flex justify-center items-start flex-col gap-y-2">
         <hr
           class="border-[#ff0066] w-40 border-2 shadow-pink"
@@ -312,7 +319,7 @@
     <!-- Services -->
 
     <!-- Skills -->
-    <div class="w-100 mt-28 bg-slate-200 py-10">
+    <div class="w-100 mt-28 bg-slate-200 py-16">
       <div class="flex flex-wrap justify-center md:gap-y-20 gap-y-10">
         <div class="xl:w-1/4 w-1/2 text-black h-full">
           <div class="flex flex-col items-center">
@@ -367,7 +374,7 @@
     <!-- Skills -->
 
     <!-- Portfolio -->
-    <div class="w-[80%] mx-auto flex flex-col mt-28">
+    <div id="portfolio" class="w-[80%] mx-auto flex flex-col pt-28">
       <div class="flex justify-center items-start flex-col gap-y-2">
         <hr
           class="border-[#ff0066] w-40 border-2 shadow-pink"
@@ -604,7 +611,10 @@
     <!-- Portfolio -->
 
     <!-- Contact Me -->
-    <div class="w-100 mt-28 bg-slate-200 py-16 lg:px-30 md:px-20 px-8">
+    <div
+      id="contact"
+      class="w-100 mt-28 bg-slate-200 py-24 lg:px-30 md:px-20 px-8"
+    >
       <div class="flex justify-center items-start flex-col gap-y-2">
         <hr
           class="border-[#ff0066] w-40 border-2 shadow-light-pink"
@@ -634,7 +644,7 @@
     <!-- Contact Me -->
 
     <!-- Customer Feedback -->
-    <div class="w-[80%] mx-auto flex flex-col mt-28">
+    <div id="customer" class="w-[80%] mx-auto flex flex-col pt-28">
       <div class="flex justify-center items-start flex-col gap-y-2">
         <hr
           class="border-[#ff0066] w-40 border-2 shadow-pink"
@@ -665,7 +675,7 @@
       <div class="flex flex-wrap text-black mt-16">
         <div class="lg:w-1/3 md:w-1/2 w-full">
           <div
-            class="w-[90%] bg-white py-14 px-4 flex flex-col items-center rounded-md"
+            class="lg:w-[80%] w-[90%] bg-white py-14 px-4 flex flex-col items-center rounded-md"
           >
             <img
               class="w-20 rounded-full"
@@ -731,7 +741,7 @@
         </div>
         <div class="lg:w-1/3 md:w-1/2 w-full">
           <div
-            class="w-[90%] bg-white py-14 px-4 flex flex-col items-center rounded-md"
+            class="lg:w-[80%] w-[90%] bg-white py-14 px-4 flex flex-col items-center rounded-md"
           >
             <img
               class="w-20 rounded-full"
@@ -797,7 +807,7 @@
         </div>
         <div class="lg:w-1/3 md:w-1/2 w-full">
           <div
-            class="w-[90%] bg-white py-14 px-4 flex flex-col items-center rounded-md"
+            class="lg:w-[80%] w-[90%] bg-white py-14 px-4 flex flex-col items-center rounded-md"
           >
             <img
               class="w-20 rounded-full"
@@ -865,7 +875,7 @@
         </div>
         <div class="lg:w-1/3 md:w-1/2 w-full">
           <div
-            class="w-[90%] bg-white py-14 px-4 flex flex-col items-center rounded-md"
+            class="lg:w-[80%] w-[90%] bg-white py-14 px-4 flex flex-col items-center rounded-md"
           >
             <img
               class="w-20 rounded-full"
@@ -933,7 +943,7 @@
         </div>
         <div class="lg:w-1/3 md:w-1/2 w-full">
           <div
-            class="w-[90%] bg-white py-14 px-4 flex flex-col items-center rounded-md"
+            class="lg:w-[80%] w-[90%] bg-white py-14 px-4 flex flex-col items-center rounded-md"
           >
             <img
               class="w-20 rounded-full"
@@ -1002,7 +1012,7 @@
     <!-- Customer Feedback -->
 
     <!-- Weblog -->
-    <div class="w-[80%] mx-auto flex flex-col mt-28">
+    <div id="weblog" class="w-[80%] mx-auto flex flex-col pt-28">
       <div class="flex justify-center items-start flex-col gap-y-2">
         <hr
           class="border-[#ff0066] w-40 border-2 shadow-pink"
@@ -1141,6 +1151,51 @@
     <!-- Footer -->
     <script>
       AOS.init();
+    </script>
+    <script>
+      const duration = 1000;
+      document.addEventListener("DOMContentLoaded", function () {
+        const navbarLinks = document.querySelectorAll(".navbar a");
+        const closeBtn = document.querySelector("#closeBtn");
+        navbarLinks.forEach((link) => {
+          link.addEventListener("click", smoothScroll);
+        });
+        function smoothScroll(e) {
+          e.preventDefault();
+          navbarLinks.forEach((link) => {
+            link.classList.remove("active");
+          });
+          e.target.classList.add("active");
+          closeBtn.click();
+          const targetId = e.target.getAttribute("href");
+          const targetPosition = document.querySelector(targetId).offsetTop;
+          const startPosition = window.pageYOffset;
+          let distance = targetPosition - startPosition;
+          if (e.target.href.endsWith("contact")) {
+            distance -= 150;
+          }
+          let startTimestamp = null;
+          function scrollAnimation(timestamp) {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = timestamp - startTimestamp;
+            const easeProgress = easeInOutCubic(
+              progress,
+              startPosition,
+              distance,
+              duration
+            );
+            window.scrollTo(0, easeProgress);
+            if (progress < duration) requestAnimationFrame(scrollAnimation);
+          }
+          requestAnimationFrame(scrollAnimation);
+        }
+        function easeInOutCubic(t, b, c, d) {
+          t /= d / 2;
+          if (t < 1) return (c / 2) * t * t * t + b;
+          t -= 2;
+          return (c / 2) * (t * t * t + 2) + b;
+        }
+      });
     </script>
   </body>
 </html>
